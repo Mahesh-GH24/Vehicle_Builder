@@ -28,8 +28,8 @@ class Motorbike extends Vehicle {
     // Constructor for the Motorbike class
     constructor(
       // Vehicle class properties
-      started: boolean,
-      currentSpeed: number,
+      // started: boolean,
+      // currentSpeed: number,
       //Motorbike class properties
       vin: string,
       color: string,
