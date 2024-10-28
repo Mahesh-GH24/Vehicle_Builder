@@ -34,8 +34,9 @@ class Truck extends Vehicle implements AbleToTow {
     // Constructor for the Truck class
     constructor(
       // Vehicle class properties
-      started: boolean,
-      currentSpeed: number,
+      //started: boolean,
+      //currentSpeed: number,
+
       //Truck class properties
       vin: string,
       color: string,
@@ -49,6 +50,7 @@ class Truck extends Vehicle implements AbleToTow {
     ) {
       // Call the constructor of Vehicle class
       super();
+
       //initialize the properties of the Motorbike class
       this.vin = vin;
       this.color = color;
@@ -57,6 +59,7 @@ class Truck extends Vehicle implements AbleToTow {
       this.year = year;
       this.weight = weight;
       this.topSpeed = topSpeed;
+      
       //check if the wheels array has 4 elements and create 4 new default Wheel objects if it does not
       if (wheels.length !==4) {
         this.wheels = [new Wheel(),new Wheel(),new Wheel(),new Wheel()];
