@@ -314,15 +314,20 @@ class Cli {
         // TODO: check if the selected vehicle is the truck
         // TODO: if it is, log that the truck cannot tow itself then perform actions on the truck to allow the user to select another action
         // TODO: if it is not, tow the selected vehicle then perform actions on the truck to allow the user to select another action
-        if (answers.vehicleType === 'Truck'){
+        
+        //console.log(answers.vehicleToTow instanceof Truck);
+        //console.log(answers.vehicleToTow instanceof Motorbike);
+        //console.log(answers.vehicleToTow instanceof Car);
+                
+        if (answers.vehicleToTow instanceof Truck){
           console.log('Truck cannot tow itself. Please select another action');
           this.performActions();
         }
-        else if(answers.vehicle === 'Car' || answers.vehicle === 'Motorbike'){
+        else if(answers.vehicleToTow instanceof Car || answers.vehicleToTow instanceof Motorbike){
           truck.tow(answers.vehicleToTow);
           // this.vehicles.tow(this.vehicle);
           this.performActions();
-        }
+        }        
       });
   }
 
