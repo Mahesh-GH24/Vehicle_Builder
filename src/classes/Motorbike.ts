@@ -51,6 +51,8 @@ class Motorbike extends Vehicle {
       this.weight = weight;
       this.topSpeed = topSpeed;
       //check if the wheels array has 2 elements and create 2 new default Wheel objects if it does not
+     // console.log(wheels.length);
+     
       if (wheels.length !==2) {
         this.wheels = [new Wheel(),new Wheel()];
       }
@@ -83,6 +85,14 @@ class Motorbike extends Vehicle {
     console.log(`Motorbike top speed: ${this.topSpeed}`);
     console.log(`Motorbike color: ${this.color}`);
     console.log(`Motorbike wheels: ${this.wheels}`);
+
+    // Print details of the wheels
+    console.log(
+      `Wheel 1: ${this.wheels[0].getDiameter} inch with a ${this.wheels[0].getTireBrand} tire`
+    );
+    console.log(
+      `Wheel 2: ${this.wheels[1].getDiameter} inch with a ${this.wheels[1].getTireBrand} tire`
+    );
   }
  
 }
