@@ -116,14 +116,15 @@ class Truck extends Vehicle implements AbleToTow {
     super.printDetails();
 
     // Print details of the Truck class
-    console.log(`VIN: ${this.vin}`);
-    console.log(`Make: ${this.make}`);
-    console.log(`Model: ${this.model}`);
-    console.log(`Year: ${this.year}`);
-    console.log(`Weight: ${this.weight} lbs`);
-    console.log(`Top Speed: ${this.topSpeed} mph`);
-    console.log(`Color: ${this.color}`);
-    console.log(`Towing Capacity: ${this.towingCapacity}`);
+    console.log('Truck details');
+    console.log(`Truck VIN: ${this.vin}`);
+    console.log(`Truck Make: ${this.make}`);
+    console.log(`Truck Model: ${this.model}`);
+    console.log(`Truck Year: ${this.year}`);
+    console.log(`Truck Weight: ${this.weight} lbs`);
+    console.log(`Truck Top Speed: ${this.topSpeed} mph`);
+    console.log(`Truck Color: ${this.color}`);
+    console.log(`Truck Towing Capacity: ${this.towingCapacity}`);
     
     // Print details of the wheels
     console.log(

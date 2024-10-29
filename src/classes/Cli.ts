@@ -268,6 +268,8 @@ class Cli {
       ])
       .then((answers) => {
         // TODO: Use the answers object to pass the required properties to the Motorbike constructor
+        const wheel1 = new Wheel(answers.frontWheelDiameter,answers.frontWheelBrand);
+        const wheel2 = new Wheel(answers.rearWheelDiameter,answers.rearWheelBrand);
         const motorbike = new Motorbike(
           // Call the static generateVin method using the class name Cli.
           Cli.generateVin(),
@@ -277,7 +279,7 @@ class Cli {
           answers.year,
           answers.weight,
           answers.topSpeed,
-          []
+          [wheel1,wheel2]
         );
 
         // TODO: push the motorbike to the vehicles array
@@ -443,6 +445,9 @@ class Cli {
           }
           if (motorbike){
             motorbike.wheelie();
+          }
+          else{
+            console.log('Wheelie cannot be performed on this Vehicle Type');
           }
         }
 
